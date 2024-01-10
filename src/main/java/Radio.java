@@ -7,10 +7,10 @@ public class Radio {
     }
 
     public void setCurrentVolume(int newCurrentVolume) {
-        if (newCurrentVolume < 0) {
+        if (newCurrentVolume <0) {
             return;
         }
-        if (newCurrentVolume > 100) {
+        if (newCurrentVolume >100) {
             return;
         }
         currentVolume = newCurrentVolume;
@@ -29,21 +29,21 @@ public class Radio {
 
 
     public void changeVolumeIncrease() { //изменение звука++
-        if (currentVolume == 100) {
-            currentVolume = 100;
-        }
-        if (currentVolume < 100 && currentVolume >= 0) {
+        if (currentVolume < 100) {
             currentVolume++;
+        }
+       else{
+            currentVolume = 100;
         }
     }
 
 
     public void changeVolumeDecrease() { //изменение звука --
-        if (currentVolume == 0) {
-            currentVolume = 0;
-        }
-        if (currentVolume > 0 && currentVolume <= 100) {
+        if (currentVolume > 0) {
             currentVolume--;
+        }
+        else{
+            currentVolume = 0;
         }
     }
 
@@ -51,7 +51,7 @@ public class Radio {
 //  Station
 
     public void changeStationIncrease() {// изменение станций в ++
-        if (currentStation >= 0 && currentStation <9) {
+        if (currentStation <9) {
             currentStation++;
         }
         if (currentStation >= 9) {
@@ -60,7 +60,7 @@ public class Radio {
     }
 
     public void changeStationDecrease() {
-        if (currentStation <= 9 && currentStation > 0) {
+        if (currentStation > 0) {
             currentStation--;
         }
         if (currentStation <= 0) {

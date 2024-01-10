@@ -39,6 +39,7 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
 
+
     @Test // Проверка верхнего граничного в пределах увеличения звука
     public void shouldChangeVolumeToIncrease() { //изменение звука в ++
         Radio radio = new Radio();
